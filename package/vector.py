@@ -27,39 +27,12 @@ class Vector :
 		self.y += other.y
 		return self
 	
-	def __mul__(self, other : float) :
-		return Vector(other * self.x, other * self.y)
-
-	def __imul__(self, other):
-		self.x *= other
-		self.y *= other
-		return self
-
 	def __neg__(self):
 		return Vector(-self.x, -self.y)
 	
-	def __sub__(self, other):
-		return Vector(self.x - other.x, self.y - other.y)
-	
-	def __isub__(self, other):
-		self.x -= other.x
-		self.y -= other.y
-		return self
-
 	def __eq__(self, other):
 		return self.x == other.x and self.y == other.y
 	
 	def __ne__(self, other):
 		return self.x != other.x or self.y != other.y
 
-	def add(self, other):
-		self.x += other.x
-		self.y += other.y
-
-	def sub(self, other):
-		# self -= other # Either this can be done or what is done below
-		self.x -= other.x
-		self.y -= other.y
-
-	def __str__(self):
-		return f"({self.x}, {self.y})"

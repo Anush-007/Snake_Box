@@ -37,7 +37,7 @@ def gameloop():
 			if event.type == pygame.KEYDOWN:
 				snake.turn(event.key)
 
-		game_over = not snake.update()
+		snake.update()
 		win.fill(screenfill)
 
 		# checking for food to be eaten
@@ -54,5 +54,5 @@ def gameloop():
 
 gameloop()
 
-# pygame.quit()
-# quit()
+pygame.quit()
+quit()

@@ -1,10 +1,10 @@
 from pygame.draw import rect
 from pygame import Rect
-# from .direction import Direction, KeyMap
+from random import choice
+
 from .direction import key2Vec
 from .constants import bheight, bwidth, size
 
-from random import choice
 
 class Snake():
 	color = (233, 90, 114)

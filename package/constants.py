@@ -1,10 +1,3 @@
-def singleton(_cls):
-	instances = {}
-	def getinstance(*args, **kwargs):
-		if _cls not in instances:
-			instances[_cls] = _cls(*args, **kwargs)
-		return instances[_cls]
-	return getinstance
 
 #screen
 width = 1280
